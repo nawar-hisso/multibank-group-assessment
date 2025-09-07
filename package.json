@@ -1,0 +1,38 @@
+{
+  "name": "multibank-group-assessment",
+  "version": "1.0.0",
+  "description": "MultiBank Group Assessment - NFT Marketplace with Next.js frontend and Foundry smart contracts",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm run start",
+    "lint": "cd frontend && npm run lint",
+    "install:frontend": "cd frontend && npm install",
+    "install:contracts": "cd contracts && forge install",
+    "install:all": "npm run install:frontend && npm run install:contracts",
+    "test:frontend": "cd frontend && npm test",
+    "test:contracts": "cd contracts && forge test",
+    "test:all": "npm run test:frontend && npm run test:contracts",
+    "build:contracts": "cd contracts && forge build",
+    "deploy:contracts": "cd contracts && forge script script/DeployNFTMarketplace.s.sol --rpc-url $RPC_URL --private-key $PRIVATE_KEY --broadcast"
+  },
+  "keywords": [
+    "nft",
+    "marketplace",
+    "nextjs",
+    "foundry",
+    "solidity",
+    "ethereum",
+    "web3"
+  ],
+  "author": "MultiBank Group",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.2.0"
+  }
+}

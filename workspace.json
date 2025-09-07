@@ -1,0 +1,37 @@
+{
+  "name": "multibank-group-assessment",
+  "version": "1.0.0",
+  "description": "MultiBank Group Assessment - NFT Marketplace",
+  "workspaces": ["frontend"],
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm run start",
+    "lint": "cd frontend && npm run lint",
+    "test": "npm run test:all",
+    "test:all": "npm run test:frontend && npm run test:contracts",
+    "test:frontend": "cd frontend && npm test",
+    "test:contracts": "cd contracts && forge test",
+    "install:all": "npm run install:frontend && npm run install:contracts",
+    "install:frontend": "cd frontend && npm install",
+    "install:contracts": "cd contracts && forge install",
+    "build:contracts": "cd contracts && forge build",
+    "deploy:contracts": "cd contracts && forge script script/DeployNFTMarketplace.s.sol --rpc-url $RPC_URL --private-key $PRIVATE_KEY --broadcast"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "nft",
+    "marketplace",
+    "nextjs",
+    "foundry",
+    "solidity",
+    "ethereum",
+    "web3",
+    "monorepo"
+  ],
+  "author": "MultiBank Group",
+  "license": "MIT"
+}
